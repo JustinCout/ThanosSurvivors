@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300");
+
+.pageWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  animation: fadeIn 500ms;
+}
+
+body {
+  background-color: rgb(36, 36, 37) !important;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  color: white;
+  margin-bottom: 50px;
+  background-image: radial-gradient(
+    rgb(204, 13, 19) 40%,
+    rgba(41, 38, 38, 0.767)
+  );
+  height: 8.5rem;
+  text-align: center;
+}
+
+header nav h2 {
+  margin: 0 auto;
+  position: relative;
+  top: 10px;
+  font-size: 80px;
+  font-family: Arial Narrow Bold, sans-serif;
+  font-weight: bolder;
+  letter-spacing: -7.4px;
+  border: 2px solid white;
+  width: 330px;
+}
+
+header nav h3 {
+  margin: 0 auto;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  left: 15px;
+  top: 14px;
+  font-size: 16px;
+  letter-spacing: 28px;
+}
+
+/* Avengers */
+.toggle-msg {
+  margin: 0 auto;
+  font-size: 24px;
+  width: 80%;
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  font-weight: lighter;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.click-msg {
+  padding: 20px 0 0 0;
+  width: 60%;
+}
+
+#gauntlet {
+  max-width: 90px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 12px solid rgba(0, 0, 0, 0.012);
+  border-radius: 100%;
+  box-shadow: 0 0 0 rgba(255, 212, 58, 0.712);
+  animation: pulse 1.5s infinite;
+  margin-bottom: 50px;
+}
+
+#gauntlet:hover {
+  max-width: 94px;
+  cursor: pointer;
+  background-color: rgba(241, 195, 26, 0.36);
+  border: 10px solid rgba(243, 195, 21, 0.012);
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.4);
+  }
+
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(204, 169, 44, 0);
+  }
+
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}
+
+#toggle-heroes {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 400px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#toggle-heroes h3 {
+  color: white;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+}
+
+.heroes {
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 10px;
+  width: 13.5rem;
+}
+
+.heroes:hover {
+  box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
+  width: 14rem;
+  cursor: pointer;
+}
+
+#avengers {
+  margin: 0 auto;
+  display: none;
+}
+
+#row1 {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+#row2 {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+/* Reddit */
+#toggle-search {
+  background-color: rgba(204, 13, 19, 0.719);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+}
+
+#toggle-search:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#search {
+  display: none;
+}
+
+#reddit-card:hover {
+  width: 102%;
+}
+
+.btn {
+  color: white !important;
+  background-color: rgb(179, 14, 19) !important;
+}
+
+.btn:hover {
+  background-color: rgb(121, 9, 13) !important;
+}
+
+#top {
+  color: white;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  background-color: rgba(255, 0, 0, 0.322);
+  border: thin solid rgba(255, 0, 0, 0.048);
+  border-radius: 5px;
+}
+
+#top:hover {
+  border: thin solid red;
+}
+
+/* Footer */
+footer {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  margin-top: 50px;
+  background-image: radial-gradient(
+    rgb(204, 13, 19) 30%,
+    rgba(66, 18, 18, 0.767)
+  );
+}
+
+#copyright {
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1087px) {
+  .heroes {
+    margin-bottom: 10px;
+    width: 12rem;
+  }
+
+  .heroes:hover {
+    width: 12.2rem;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .heroes {
+    margin-bottom: 10px;
+    width: 11rem;
+  }
+
+  .heroes:hover {
+    width: 11.2rem;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .heroes {
+    margin-bottom: 10px;
+    width: 14.8rem;
+  }
+
+  .heroes:hover {
+    width: 15rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .toggle-msg {
+    font-size: 20px;
+    width: 100%;
+  }
+  #reddit-card:hover {
+    width: 102%;
+  }
+}

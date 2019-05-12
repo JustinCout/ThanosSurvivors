@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <title>Thanos' Survivors</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <h2>THANOS'</h2>
+        <h3>SURVIVORS</h3>
+      </nav>
+    </header>
+    <div class="pageWrap">
+      <main>
+        <p class="toggle-msg">
+          At the end of Avengers: Infinity War, Thanos won. He collected all of
+          the infinity stones, granting him the omnipotent powers that can alter
+          the universe. Following the struggle to collect the final stone, the
+          mind stone, Thanos places the final stone in his gauntlet and snaps
+          his finger. The impact of a single snap was so devastating, it wiped
+          out 50% of all living things from existence.
+        </p>
+        <p class="toggle-msg click-msg">
+          <b>Click the gauntlet</b> to find out who survived. For more
+          information on each character, <b>click their card.</b>
+        </p>
+        <div id="toggle-heroes">
+          <img
+            id="gauntlet"
+            src="imgs/infinity_gauntlet.png"
+            alt="Thanos' Gauntlet"
+          />
+        </div>
+        <div id="avengers">
+          <div id="row1" class="row">
+            <div class="card heroes" id="thor"></div>
+            <div class="card heroes" id="hulk"></div>
+            <div class="card heroes" id="rocket"></div>
+            <div class="card heroes" id="blackwidow"></div>
+          </div>
+          <div id="row2" class="row">
+            <div class="card heroes" id="capm"></div>
+            <div class="card heroes" id="cap"></div>
+
+            <div class="card heroes" id="ironman"></div>
+            <div class="card heroes" id="ant"></div>
+            <div class="card heroes" id="war"></div>
+          </div>
+        </div>
+      </main>
+      <section>
+        <div id="search-container" class="container">
+          <h4 id="toggle-search">Search Reddit for Theories</h4>
+          <div id="search" class="card card-body bg-light mb-3">
+            <form id="search-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="search-input"
+                  class="form-control mb-3"
+                  placeholder="Search Term..."
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-check-label">Limit:</label>
+                <select name="limit" id="limit" class="form-control">
+                  <option value="5">5</option>
+                  <option value="10">10</option>
+                  <option value="25" selected>25</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+                </select>
+              </div>
+              <div class="form-check form-check-inline">
+                <label class="form-check-label">Sort By:</label>
+                <input
+                  class="form-check-input ml-2"
+                  type="radio"
+                  name="sortby"
+                  value="relevance"
+                  checked
+                />
+                <label class="form-check-label">Relevance</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sortby"
+                  value="top"
+                />
+                <label class="form-check-label">
+                  Top
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sortby"
+                  value="new"
+                />
+                <label class="form-check-label">
+                  New
+                </label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="sortby"
+                  value="comments"
+                />
+                <label class="form-check-label">
+                  Comments
+                </label>
+              </div>
+              <button type="submit" class="btn btn-block mt-4">Search</button>
+            </form>
+          </div>
+          <div id="error-msg"></div>
+          <div id="results"></div>
+        </div>
+      </section>
+    </div>
+
+    <button id="top" type="button"><i class="fas fa-arrow-up"></i></button>
+    <footer>
+      <nav class="navbar">
+        <div id="copyright">© 2019 Copyright: Justin Coutinho</div>
+      </nav>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/reddit.js"></script>
+    <script src="scripts/heroes.js"></script>
+  </body>
+</html>
