@@ -169,6 +169,12 @@ header nav h3 {
   display: none;
 }
 
+#status {
+  color: white;
+  font-size: 26px;
+  text-align: center;
+}
+
 #reddit-card:hover {
   width: 102%;
 }

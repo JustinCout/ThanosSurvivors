@@ -12,6 +12,8 @@ $(document).ready(function() {
       .catch(err => console.log(err));
   }
 
+  //Print results and status message here
+  let print = document.getElementById("status");
   $.ajax({
     dataType: "json",
     url: subreddit,
@@ -52,19 +54,18 @@ $(document).ready(function() {
         });
         output += "</div>";
         document.getElementById("results").innerHTML = output;
+        print.style.display = "none";
       });
     },
     error: function() {
-      print.innerHTML = "error";
+      document.getElementById("results").innerHTML = "error";
     }
   });
 });
 
 //Toggle reddit search form
 $("#toggle-search").click(function() {
-  $("#search").toggle("fast", function() {
-    // Animation complete.
-  });
+  $("#search").toggle("fast", function() {});
 });
 
 //Search form DOM
@@ -83,14 +84,16 @@ searchForm.addEventListener("submit", e => {
 
   // Validation
   //empty string
-  if (searchTerm == "") {
+  if (searchTerm === "") {
     let errormsg = document.getElementById("error-msg");
     errormsg.style.color = "red";
     errormsg.innerHTML = "Search Term cannot be empty";
-
     searchInput.style.border = "thin solid red";
   }
-  searchInput.value = "";
+
+  if (searchTerm !== "") {
+    errormsg.style.display = "none";
+  }
 
   //Search function
   function searchReddit(searchTerm, limit, sortBy) {
@@ -167,7 +170,8 @@ thor.addEventListener("click", function() {
       })
       .catch(err => console.log(err));
   }
-
+  let print = document.getElementById("status");
+  print.style.display = "block";
   $.ajax({
     dataType: "json",
     url: subreddit,
@@ -208,6 +212,7 @@ thor.addEventListener("click", function() {
         });
         output += "</div>";
         document.getElementById("results").innerHTML = output;
+        print.style.display = "none";
       });
     },
     error: function() {
@@ -236,7 +241,8 @@ capm.addEventListener("click", function() {
       })
       .catch(err => console.log(err));
   }
-
+  let print = document.getElementById("status");
+  print.style.display = "block";
   $.ajax({
     dataType: "json",
     url: subreddit,
@@ -277,6 +283,7 @@ capm.addEventListener("click", function() {
         });
         output += "</div>";
         document.getElementById("results").innerHTML = output;
+        print.style.display = "none";
       });
     },
     error: function() {
@@ -305,7 +312,8 @@ rocket.addEventListener("click", function() {
       })
       .catch(err => console.log(err));
   }
-
+  let print = document.getElementById("status");
+  print.style.display = "block";
   $.ajax({
     dataType: "json",
     url: subreddit,
@@ -346,6 +354,7 @@ rocket.addEventListener("click", function() {
         });
         output += "</div>";
         document.getElementById("results").innerHTML = output;
+        print.style.display = "none";
       });
     },
     error: function() {
@@ -374,7 +383,8 @@ cap.addEventListener("click", function() {
       })
       .catch(err => console.log(err));
   }
-
+  let print = document.getElementById("status");
+  print.style.display = "block";
   $.ajax({
     dataType: "json",
     url: subreddit,
@@ -415,6 +425,7 @@ cap.addEventListener("click", function() {
         });
         output += "</div>";
         document.getElementById("results").innerHTML = output;
+        print.style.display = "none";
       });
     },
     error: function() {
@@ -443,7 +454,8 @@ hulk.addEventListener("click", function() {
       })
       .catch(err => console.log(err));
   }
-
+  let print = document.getElementById("status");
+  print.style.display = "block";
   $.ajax({
     dataType: "json",
     url: subreddit,
@@ -484,6 +496,7 @@ hulk.addEventListener("click", function() {
         });
         output += "</div>";
         document.getElementById("results").innerHTML = output;
+        print.style.display = "none";
       });
     },
     error: function() {
@@ -512,7 +525,8 @@ blackwidow.addEventListener("click", function() {
       })
       .catch(err => console.log(err));
   }
-
+  let print = document.getElementById("status");
+  print.style.display = "block";
   $.ajax({
     dataType: "json",
     url: subreddit,
@@ -553,6 +567,7 @@ blackwidow.addEventListener("click", function() {
         });
         output += "</div>";
         document.getElementById("results").innerHTML = output;
+        print.style.display = "none";
       });
     },
     error: function() {
@@ -581,7 +596,8 @@ ironman.addEventListener("click", function() {
       })
       .catch(err => console.log(err));
   }
-
+  let print = document.getElementById("status");
+  print.style.display = "block";
   $.ajax({
     dataType: "json",
     url: subreddit,
@@ -622,6 +638,7 @@ ironman.addEventListener("click", function() {
         });
         output += "</div>";
         document.getElementById("results").innerHTML = output;
+        print.style.display = "none";
       });
     },
     error: function() {
@@ -650,7 +667,8 @@ ant.addEventListener("click", function() {
       })
       .catch(err => console.log(err));
   }
-
+  let print = document.getElementById("status");
+  print.style.display = "block";
   $.ajax({
     dataType: "json",
     url: subreddit,
@@ -691,6 +709,7 @@ ant.addEventListener("click", function() {
         });
         output += "</div>";
         document.getElementById("results").innerHTML = output;
+        print.style.display = "none";
       });
     },
     error: function() {
@@ -719,7 +738,8 @@ war.addEventListener("click", function() {
       })
       .catch(err => console.log(err));
   }
-
+  let print = document.getElementById("status");
+  print.style.display = "block";
   $.ajax({
     dataType: "json",
     url: subreddit,
@@ -760,6 +780,7 @@ war.addEventListener("click", function() {
         });
         output += "</div>";
         document.getElementById("results").innerHTML = output;
+        print.style.display = "none";
       });
     },
     error: function() {

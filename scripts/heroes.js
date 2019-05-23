@@ -23,9 +23,7 @@ $(document).ready(function() {
       let print = document.getElementById("ironman");
       for (let i = 0; i < data.results.length; i++) {
         var hero = data.results[i];
-        print.innerHTML = `<img class="card-img-top" src="${
-          hero.image.url
-        }" alt="Card image cap">
+        print.innerHTML = `<img class="card-img-top" src="assets/ironman.jpg" alt="Card image iron man">
                      <div class="card-body">
                      <h5 class="card-title">${hero.name}</h5>
                      <p class="card-text">"${hero.biography["full-name"]}"</p>
@@ -86,9 +84,7 @@ $(document).ready(function() {
       for (let i = 0; i < data.results.length; i++) {
         var hero = data.results[0];
         print.innerHTML = `
-               <img class="card-img-top" src="${
-                 hero.image.url
-               }" alt="Card image cap">
+               <img class="card-img-top" src="assets/bw.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">${hero.name}</h5>
                   <p class="card-text">"${hero.biography["full-name"]}"</p>
@@ -119,9 +115,7 @@ $(document).ready(function() {
       for (let i = 0; i < data.results.length; i++) {
         var hero = data.results[1];
         print.innerHTML = `
-               <img class="card-img-top" src="${
-                 hero.image.url
-               }" alt="Card image cap">
+               <img class="card-img-top" src="assets/thor.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">${hero.name}</h5>
                   <p class="card-text">"${hero.biography["full-name"]}"</p>
@@ -152,9 +146,7 @@ $(document).ready(function() {
       for (let i = 0; i < data.results.length; i++) {
         var hero = data.results[0];
         print.innerHTML = `
-               <img class="card-img-top" src="${
-                 hero.image.url
-               }" alt="Card image cap">
+               <img class="card-img-top" src="assets/hulk.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">${hero.name}</h5>
                   <p class="card-text">"${hero.biography["full-name"]}"</p>
@@ -218,9 +210,7 @@ $(document).ready(function() {
       for (let i = 0; i < data.results.length; i++) {
         var hero = data.results[1];
         print.innerHTML = `
-               <img class="card-img-top" src="${
-                 hero.image.url
-               }" alt="Card image cap">
+               <img class="card-img-top" src="assets/cm.jpg" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title">${hero.name}</h5>
                   <p class="card-text">"${hero.biography["full-name"]}"</p>
